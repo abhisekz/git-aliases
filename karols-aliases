@@ -1,0 +1,37 @@
+[user]
+	name = Ashok Kumar
+	email = ash1982ok@gmail.com
+[alias]
+	log = log --use-mailmap
+	br = branch
+	bv = branch -vv
+	d = diff
+	f = fetch
+	m = merge
+	hist = log --pretty=format:'%C(reverse blue white)%h%C(reset)%C(auto)%d%C(reset) %C(blue)%ar%C(reset) %s %C(cyan)%aN' --graph --full-history
+	topo = !git hist --all --simplify-by-decoration
+	rellog = log --pretty=format:'%h %d %s'
+	st = status
+	ci = commit --verbose
+	co = checkout
+	diff = diff --word-diff
+	rh = reset --hard
+	k = !gitk --all
+	type = cat-file -t
+	dump = cat-file -p
+	ds = diff --staged
+	up = merge --ff-only @{u}
+	lop = log -p --ignore-all-space --ignore-blank-lines
+	review-branch = rev-list --reverse --first-parent
+	r = reset
+	amend = commit --amend
+	refresh = commit --amend --no-edit -u
+	prmsg = "log --reverse --format=\"## %s ##%n%n%b\""
+	pushf = "push --force-with-lease"
+	rhu = reset --hard @{u}
+	mi = merge --no-ff --no-edit
+	fa = fetch --all
+[rerere]
+	enabled = 1
+[push]
+	default = simple
